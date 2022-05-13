@@ -3,8 +3,9 @@
     <h1 class="text-primary">{{ title }}</h1>
     <img :src="bigImg" alt="">
     <div>
-      <span>{{ count }}</span>
-      <button @click="increment">按钮</button>
+      <span @click="increment">{{ count }}</span>
+      <span>{{ user.name }}---{{ user.age }}</span>
+      <button @click="handleSetuser">按钮</button>
     </div>
     <div class="logo"></div>
   </div>
@@ -21,10 +22,18 @@ export default {
     };
   },
   computed: {
-    ...mapState(['count'])
+    ...mapState(['count']),
+    ...mapState('moduleDemo', ['user'])
   },
   methods: {
-    ...mapMutations(['increment'])
+    ...mapMutations(['increment']),
+    ...mapMutations('moduleDemo', ['setUser']),
+    handleSetuser() {
+      this.setUser({
+        name: 'ls',
+        age:20
+      })
+    }
   }
 };
 </script>
