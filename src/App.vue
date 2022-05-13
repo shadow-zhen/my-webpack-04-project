@@ -1,16 +1,10 @@
 <template>
   <div id="app">
-    <h1 class="text-primary">{{ title }}</h1>
-    <p>{{ $t('message.hello') }}</p>
-    <p>{{ $t('demo.serviceName') }}</p>
-    <p>{{ $t('foo.fileTypeInvalidMsg') }}</p>
-    <img :src="bigImg" alt="">
-    <div>
-      <span @click="increment">{{ count }}</span>
-      <span>{{ user.name }}---{{ user.age }}</span>
-      <button @click="handleSetuser">按钮</button>
-    </div>
-    <div class="logo"></div>
+    <router-link to="/login">Go to Login</router-link>
+    <router-link to="/guest">Go to guest</router-link>
+    <!-- 路由出口 -->
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
   </div>
 </template>
 

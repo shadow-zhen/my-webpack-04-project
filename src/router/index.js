@@ -1,13 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Foo from '../components/Foo';
-import Bar from '../components/Bar';
-
 Vue.use(VueRouter)
+
 const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }
+  { path: '/login', component: () => import('@/views/login.vue') },
+  { path: '/guest', component: () => import('@/views/guest.vue')  }
 ]
 
 const router = new VueRouter({

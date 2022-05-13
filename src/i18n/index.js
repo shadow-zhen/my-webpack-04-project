@@ -34,7 +34,7 @@ langModules.keys().forEach(langModuleName => {
   const lang = String(idPath.splice(-1)[0]).replace('-', '_').replace('.js', '')
   const langNameSpace = idPath.splice(1).join('.')
   const messageobject = zipObjectDeep([langNameSpace], [langModules(langModuleName)])
-  console.log(idPath, lang, langNameSpace, messageobject);
+  // console.log(idPath, lang, langNameSpace, messageobject);
   i18n.mergeLocaleMessage(lang, messageobject)
 })
 
