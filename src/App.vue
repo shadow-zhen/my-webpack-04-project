@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <h1 class="text-primary">{{ title }}</h1>
+    <p>{{ $t('message.hello') }}</p>
+    <p>{{ $t('demo.serviceName') }}</p>
+    <p>{{ $t('foo.fileTypeInvalidMsg') }}</p>
     <img :src="bigImg" alt="">
     <div>
       <span @click="increment">{{ count }}</span>
@@ -17,7 +20,7 @@ import { mapState, mapMutations } from 'vuex';
 export default {
   data() {
     return {
-      title: 'Hello Vue123',
+      title: 'Hello Vue',
       bigImg
     };
   },
