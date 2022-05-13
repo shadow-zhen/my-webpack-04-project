@@ -1,0 +1,18 @@
+@import './component/navbar';
+$primary: #2525b1;
+
+.text-primary {
+  color: $primary;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.bg-filter {
+  filter: blur(5px);
+}
